@@ -1,4 +1,4 @@
-torch ==1.2.0+cpu
+torch 
 numpy
 streamlit
 torchvision
