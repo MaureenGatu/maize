@@ -1,6 +1,6 @@
 numpy
 streamlit
-torch
+
 torchvision
 requests
 transformers
