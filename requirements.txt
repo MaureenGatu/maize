@@ -1,7 +1,5 @@
-tensorflow
 torch
 numpy
-pandas
 streamlit
 torchvision
 requests
