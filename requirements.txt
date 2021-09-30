@@ -1,0 +1,10 @@
+tensorflow
+torch
+numpy
+pandas
+streamlit
+torchvision
+requests
+transformers
+Pillow
+torchsummary
