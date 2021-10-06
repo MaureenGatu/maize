@@ -8,3 +8,11 @@ requests
 transformers
 Pillow
 torchsummary
+
+transformers
+
+matplotlib
+einops
+tqdm
+sklearn
+scikit-learn
