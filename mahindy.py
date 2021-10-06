@@ -140,7 +140,7 @@ if my_page == 'Home':
                         #if uploaded_file is not None:
                         # Loading the Vision Transformer Model
                         # Model path
-                        MODEL_PATH = "D:/veronica_moringa/project_dsp/ViT_2nd_adjusted.pt"
+                        MODEL_PATH = "E:\Maize Deployment\ViT_2nd_adjusted.pt"
                         # load model
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                         model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
