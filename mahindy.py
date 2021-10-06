@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import numpy
 import pandas as pd
-import cv2
+#import cv2
 import streamlit as st
 from torchvision import models, transforms
 import torchvision
