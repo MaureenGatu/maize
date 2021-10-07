@@ -141,7 +141,7 @@ if my_page == 'Home':
                         # Loading the Vision Transformer Model
                         # Model path
                         #MODEL_PATH = "E:\Maize Deployment\ViT_2nd_adjusted.pt"
-                        MODEL_PATH = "https://drive.google.com/file/d/1-50BCsYx69sFmqnNgZLpZA_vT31Rt74E/view?usp=sharing"
+                        MODEL_PATH = "https://huggingface.co/maureengatu/maize_leaf_disease_classifier/blob/main/ViT_2nd_adjusted.pt"
                         # load model
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                         model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
