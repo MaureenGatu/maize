@@ -22,6 +22,8 @@ from transformers import ViTModel, ViTFeatureExtractor
 from transformers.modeling_outputs import SequenceClassifierOutput
 from torch import nn
 import torch.utils.model_zoo as model_zoo
+from functools import partial
+import pickle
 
 
 class ViTForImageClassification(nn.Module):
@@ -148,7 +150,9 @@ if my_page == 'Home':
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                         #model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
                         #model_zoo.load_url
-                        model = torch.utils.model_zoo.load_url(MODEL_PATH, map_location=torch.device('cpu'))
+                        pickle.load = partial(pickle.load, encoding="latin1")
+                        pickle.Unpickler = partial(pickle.Unpickler, encoding="latin1")
+                        model = torch.utils.model_zoo.load_url(MODEL_PATH, map_location=torch.device('cpu'),pickle_module=pickle)
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                         if torch.cuda.is_available():
                             model.cuda()
