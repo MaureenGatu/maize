@@ -21,6 +21,8 @@ import transformers
 from transformers import ViTModel, ViTFeatureExtractor
 from transformers.modeling_outputs import SequenceClassifierOutput
 from torch import nn
+import torch.utils.model_zoo as model_zoo
+
 
 class ViTForImageClassification(nn.Module):
     def __init__(self, num_labels=6):
@@ -144,7 +146,9 @@ if my_page == 'Home':
                         MODEL_PATH = "https://huggingface.co/maureengatu/maize_leaf_disease_classifier/blob/main/ViT_2nd_adjusted.pt"
                         # load model
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-                        model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
+                        #model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
+                        #model_zoo.load_url
+                        model = torch.utils.model_zoo.load_url(MODEL_PATH, map_location=torch.device('cpu'))
                         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
                         if torch.cuda.is_available():
                             model.cuda()
