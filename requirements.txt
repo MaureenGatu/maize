@@ -16,3 +16,6 @@ einops
 tqdm
 sklearn
 scikit-learn
+functools 
+partial
+pickle
