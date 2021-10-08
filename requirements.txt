@@ -18,4 +18,3 @@ sklearn
 scikit-learn
 functools 
 
-pickle
